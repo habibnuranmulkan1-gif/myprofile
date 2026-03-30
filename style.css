@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #000000, #5c0000, #ff0000);
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* GLASS */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HERO BOX */
+.hero-box {
+  width: 85%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+/* LEFT */
+.left {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* BUTTON */
+.btn-group button {
+  margin: 5px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, red, darkred);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-group button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px red;
+}
+
+/* IMAGE */
+.right img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  animation: float 4s infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-15px); }
+}
+
+/* OVERLAY */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+}
+
+.content-box {
+  display: none;
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  color: red;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* MUSIC BAR */
+.music-bar {
+  position: fixed;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px;
+  border-radius: 15px;
+
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+
+  transition: 0.4s;
+}
+
+.music-bar.show {
+  bottom: 20px;
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#progress {
+  width: 100%;
+}
+
+.time {
+  font-size: 12px;
+}
+
+/* EQUALIZER */
+.equalizer {
+  display: flex;
+  gap: 3px;
+}
+
+.equalizer span {
+  width: 4px;
+  height: 10px;
+  background: red;
+}
+
+.equalizer.active span {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  50% { height: 25px; }
+}
